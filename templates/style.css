@@ -1,0 +1,412 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+#header {
+    width: 100%;
+    /* position: relative; */
+
+}
+
+
+
+nav {
+
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+}
+
+.logo {
+    width: 140px;
+    margin-right: 4%;
+}
+
+nav {
+    padding: 10px 3%;
+}
+
+nav>ul>li {
+    display: inline-block;
+    list-style: none;
+    margin-right: 30px;
+    margin-top: 10px;
+}
+
+nav>ul>li>a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    position: relative;
+}
+
+nav>ul>span {
+    display: none;
+}
+
+nav>span {
+    display: none;
+}
+
+nav>ul>li>a::after {
+    content: "";
+    width: 0;
+    position: absolute;
+    background: white;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    transition: width 0.5s;
+}
+
+nav>ul>li:hover>a::after {
+    width: 100%;
+}
+
+.header-text {
+    margin-top: 0px;
+    font-size: 30px;
+    background: red;
+}
+
+.header-text h1 {
+    font-size: 60px;
+}
+
+.header-text span {
+    color: #ff004f;
+}
+
+.none {
+    display: none;
+}
+
+.block {
+    display: block !important;
+}
+
+
+
+/* --------------------slideshow---------------- */
+* {
+    box-sizing: border-box
+}
+
+.slide-show {
+    margin-top: -10px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 1s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 3.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* ---------------------time line-------------------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Playfair Display", serif;
+}
+
+h1 {
+    margin: 100px 0 30px 0;
+
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+}
+
+.timeline {
+    position: relative;
+    padding: 1rem;
+    margin: 0 auto;
+    max-width: 1300px;
+}
+
+.timeline:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    border: 1px solid white;
+    right: 40px;
+    top: 0;
+}
+
+.timeline:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (min-width: 700px) {
+    .timeline {
+        padding: 2rem;
+    }
+
+    .timeline:before {
+        left: calc(50% - 1px);
+        right: auto;
+    }
+}
+
+.timeline__item {
+    padding: 1rem;
+    border: 2px solid white;
+    border-image: linear-gradient(to right, skyblue 0%, white 100%);
+    border-image-slice: 1;
+    position: relative;
+    margin: 1rem 3rem 1rem 1rem;
+    clear: both;
+}
+
+.timeline__item:after,
+.timeline__item:before {
+    content: "";
+    position: absolute;
+}
+
+.timeline__item:before {
+    right: -10px;
+    top: calc(50% - 5px);
+    border-style: solid;
+    border-color: white white transparent transparent;
+    border-width: 10px;
+    transform: rotate(45deg);
+}
+
+@media screen and (min-width: 700px) {
+    .timeline__item {
+        width: 44%;
+        margin: 1rem;
+    }
+
+    .timeline__item:nth-of-type(2n) {
+        float: right;
+        margin: 1rem;
+        border-image: linear-gradient(to right, white 0%, skyblue 100%);
+        border-image-slice: 1;
+    }
+
+    .timeline__item:nth-of-type(2n):before {
+        right: auto;
+        left: -10px;
+        border-color: transparent transparent white white;
+    }
+}
+
+.timeline__item--year {
+    text-align: center;
+    max-width: 150px;
+    margin: 0 48px 0 auto;
+    font-size: 1.8rem;
+    background-color: #333;
+    line-height: 1;
+    border-image: none;
+    padding: 0.5rem 1rem 1rem;
+}
+
+.timeline__item--year:before {
+    display: none;
+}
+
+@media screen and (min-width: 700px) {
+    .timeline__item--year {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .timeline__item--year:nth-of-type(2n) {
+        float: none;
+        margin: 0 auto;
+        border-image: none;
+    }
+
+    .timeline__item--year:nth-of-type(2n):before {
+        display: none;
+    }
+}
+
+.timeline__title {
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    font-size: 1.5em;
+}
+
+.timeline__blurb {
+    line-height: 1.5;
+    font-size: 1rem;
+    margin: 0.5rem 0 0;
+}
+
+@media screen and (max-width:830px) {
+    nav>ul>li>a {
+        font-size: 14px;
+    }
+
+    .logo {
+        width: 120px;
+    }
+}
+
+@media screen and (max-width:720px) {
+    /* #header {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/phone-background.png);
+        background-size: cover;
+    } */
+
+    .header-text {
+        font-size: 16px;
+        margin-top: 150%;
+    }
+
+    .header-text h1 {
+        font-size: 30px;
+    }
+
+
+    .container>nav>ul {
+        position: fixed;
+        top: 0;
+        right: -200px;
+        background-color: #ff004f;
+        width: 200px;
+        height: 120vh;
+        padding-top: 50px;
+        transition: right 0.5s;
+        z-index: 1;
+        box-shadow: -8px -3px 20px #080808;
+
+    }
+
+    .side-nav-toggle {
+        right: 0px !important;
+    }
+
+    .container>nav>ul>li {
+        display: block;
+        margin: 25px;
+    }
+
+    nav>ul>span {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    nav>span,
+    nav>ul>span {
+        display: block;
+        font-size: 25px;
+    }
+
+    .slide-show {
+        margin-top: 10%;
+    }
+
+
+}
